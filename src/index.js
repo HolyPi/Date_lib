@@ -30,7 +30,52 @@ class D {
     get date() {
         return this._date.getDate()
     }
+
+    get hours() {
+        return this._date.getHours()
+    }
+
+    get mins() {
+        return this._date.getMinutes()
+    }
+
+    get secs() {
+        return this._date.getSeconds()
+    }
+
+    format(mask = 'M D Y') {
+        const dict = {
+            "Y": this.year,
+            "y": this.yr,
+            "M": this.month,
+            "m": this.mon,
+            "D": this._date.getDate(),
+            "d": this.date,
+            "H": this.date.getHours(),
+            "h": this.date.getHours(),
+            "I": this.date.getMinutes(),
+            "i": this.mins,
+            "S": this.date.getSeconds(),
+            "s": this.secs,
+        }
+
+        let output = ''
+        for (let i = 0; i < mask.length; i++) {
+            if (dict[mask[i]] === undefined) {
+                output += mask[i]
+            } else {
+                output += dict[mask[i]]
+            }
+        }
+        return output
+    }
+    when() {
+        const now = new D();
+        
+        
+        }
 }
+
 
 module.exports = D
 

@@ -34,3 +34,17 @@ test('D.dy', () => {
 test('D.date', () => {
     expect(d.date).toBe(today.getDate())
 })
+
+test('hours', () => {
+    expect(d.hours).toBe(7);
+})
+
+test('minutes', () => {
+    expect(d.mins).toBe(9);
+})
+
+test('seconds', () => {
+    expect(d.secs).toBe(10);
+})
+
+
