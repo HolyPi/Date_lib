@@ -47,4 +47,8 @@ test('seconds', () => {
     expect(d.secs).toBe(10);
 })
 
+test('format', () => {
+    expect(d.format(""))
+})
+
 

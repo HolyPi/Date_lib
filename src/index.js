@@ -69,12 +69,28 @@ class D {
         }
         return output
     }
+
     when() {
         const now = new D();
+        const yearDiff = this.year - now.year
+        const monthDiff = this.date.getMonth() - now.date.getMonth() + yearDiff * 12;
+        const dayDiff = this.date - now.date
         
-        
+        if (monthDiff > 11) {
+            return `${yearDiff} year(s) from now`;
+          } else if (monthDiff > 0) {
+            return `${monthDiff} month(s) from now`;
+          } else if (monthDiff < 0) {
+            return `${monthDiff} month(s) ago`;
+          } else if (monthDiff > 0) {
+            return `${dayDiff} day(s) ago`;
+          } else if (monthDiff < 0) {
+            return `${dayDiff} days from now`;
+          } else {
+            return 'today';
+          }
         }
-}
+    }
 
 
 module.exports = D
