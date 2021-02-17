@@ -51,11 +51,11 @@ class D {
             "m": this.mon,
             "D": this._date.getDate(),
             "d": this.date,
-            "H": this.date.getHours(),
-            "h": this.date.getHours(),
-            "I": this.date.getMinutes(),
+            "H": this._date.getHours(),
+            "h": this._date.getHours(),
+            "I": this._date.getMinutes(),
             "i": this.mins,
-            "S": this.date.getSeconds(),
+            "S": this._date.getSeconds(),
             "s": this.secs,
         }
 
