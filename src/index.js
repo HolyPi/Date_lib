@@ -93,7 +93,7 @@ class D {
     }
 
 
-module.exports = D
+export default D
 
 // const d = new D()
 // console.log(d.year)
